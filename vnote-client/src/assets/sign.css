@@ -1,0 +1,133 @@
+
+.vnote-sign-container {
+
+    width: 100vw;
+    min-height: 100vh;
+    padding: 1rem;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.vnote-sign-container h1 {
+
+    width: 50rem;
+    font-size: 3rem;
+    padding-top: 2.5rem;
+}
+
+.vnote-sign-container-2 {
+
+    width: 50rem;
+    height: 30rem;
+    min-width: 50rem;
+    min-height: 30rem;
+
+    display: flex;
+
+    background: var(--color-2);
+}
+
+.vnote-sign-banner {
+
+    background-image: url(../../public/lake.jpg);
+    background-size: cover;
+    background-position: bottom;
+
+    width: 50%;
+    height: 100%;
+
+
+}
+
+.vnote-sign-form {
+
+    width: 50%;
+    height: 100%;
+
+    padding: 1.5rem;
+}
+
+.vnote-sign-form h2 {
+
+    font-size: 2rem;
+
+}
+
+.vnote-sign-form form input {
+
+    width: 100%;
+
+    margin-top: 1rem;
+    padding: .5rem;
+
+    border-radius: .4rem;
+
+    outline: none;
+}
+
+.vnote-sign-form form button {
+
+    width: 10rem;
+    padding: .5rem;
+    border-radius: .4rem;
+    
+    margin-top: 2rem;
+    margin-left: calc(100% - 10rem);
+
+    background: var(--color-e-1);
+}
+
+.vnote-sign-form form button:hover {
+
+    background: var(--color-e-2);
+}
+
+.vnote-sign-error{
+
+    padding: 1rem;
+    background: var(--color-e-3);
+
+}
+
+@media ((orientation: portrait) or (max-width: 600px)) {
+
+    .vnote-sign-container {
+        
+        justify-content: flex-start;
+    }
+
+    .vnote-sign-container h1 {
+
+        width: 30rem;
+        min-width: 30rem;
+        max-width: 90%;
+    }
+    
+    .vnote-sign-container-2 {
+    
+        width: 30rem;
+        min-width: 30rem;
+        max-width: 90%;
+        height: max-content;
+    
+        flex-direction: column;
+    }
+
+    .vnote-sign-banner {
+
+        width: 100%;
+        height: 30rem;
+
+    }
+
+    .vnote-sign-form {
+        
+        width: 100%;
+        height: max-content;
+
+    }
+
+}

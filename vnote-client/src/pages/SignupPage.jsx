@@ -3,6 +3,8 @@ import { useAuth } from '../context/AuthContext';
 import { useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 
+import '../assets/sign.css';
+
 function SignupPage() {
 
     const { register, handleSubmit, formState: {errors} } = useForm();
@@ -21,46 +23,50 @@ function SignupPage() {
 
     return (
 
-        <div className=' flex h-[calc(100vh-100px)] items-center justify-center'>
-            <div className="bg-zinc-800 max-w-md w-full p-10 rounded-md">
+        <div className='vnote-sign-container'>
 
-            <h1 className="text-2xl font-bold">Signup</h1>
+            <h1>VNote</h1>
 
-                {
-                    signupErrors.map((error, i) => (
-                    <div className='bg-red-500 p-2 text-white my-2' key={i}>
-                        {error}
-                    </div>
-                    ))
-                }
+            <div className="vnote-sign-container-2">
 
-                <form onSubmit={ onSubmit }>
 
-                    <input type="text" { ...register('username', { required: true }) } 
-                    className='w-full bg-zinc-700 text-white px-4 py-2 rounded-md my-2'
-                    placeholder='Username'/>
+                <div className="vnote-sign-banner">
 
-                    { errors.username && (<p className='text-red-500'>Username is required</p>) }
+                    {
+                        signupErrors.map((error, i) => (
+                        <div className='vnote-sign-error' key={i}>
+                            {error}
+                        </div>
+                        ))
+                    }
 
-                    <input type="email" { ...register('email', { required: true }) } 
-                    className='w-full bg-zinc-700 text-white px-4 py-2 rounded-md my-2'
-                    placeholder='Email'/>
+                </div>
+                
+                <div className="vnote-sign-form">
 
-                    { errors.email && (<p className='text-red-500'>Email is required</p>) }
+                    <h2>Registrarse</h2>
 
-                    <input type="password" { ...register('password', { required: true }) } 
-                    className='w-full bg-zinc-700 text-white px-4 py-2 rounded-md my-2'
-                    placeholder='Password'/>
+                    <p> Ya tienes una cuenta? <Link to="/login" className="text-sky-500">Iniciar sesion</Link> </p>
+                    <form onSubmit={ onSubmit }>
 
-                    { errors.password && (<p className='text-red-500'>Password is required</p>) }
+                        <input type="text" { ...register('username', { required: true }) } placeholder='Username'/>
 
-                    <button type="submit">Registrarse</button>
+                        { errors.username && (<p className='text-red-500'>Username is required</p>) }
 
-                </form>
+                        <input type="email" { ...register('email', { required: true }) } placeholder='Email'/>
 
-                <p className="flex gap-x-2 justify-between">
-                    Already have an account? <Link to="/login" className="text-sky-500">Login</Link>
-                </p>
+                        { errors.email && (<p className='text-red-500'>Email is required</p>) }
+
+                        <input type="password" { ...register('password', { required: true }) } placeholder='Password'/>
+
+                        { errors.password && (<p className='text-red-500'>Password is required</p>) }
+
+                        <button type="submit">Crear cuenta</button>
+
+                    </form>
+
+
+                </div>
 
             </div>
         </div>

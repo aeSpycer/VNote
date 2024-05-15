@@ -25,7 +25,6 @@ export const AuthProvider = ({ children }) => {
         try {
             
             const res = await signupRequest(user);
-            console.log(res);
             setUser(res.data);
             setIsAuthenticated(true);
 
@@ -38,7 +37,6 @@ export const AuthProvider = ({ children }) => {
         try {
             
             const res = await loginRequest(user);
-            console.log(res);
             setUser(res.data);
             setIsAuthenticated(true);
 
@@ -67,7 +65,7 @@ export const AuthProvider = ({ children }) => {
 
                 setErrors([])
 
-            }, 5000)
+            }, 10000)
 
             return () => clearTimeout(timer);
         }
