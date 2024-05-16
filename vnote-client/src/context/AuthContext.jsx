@@ -36,6 +36,8 @@ export const AuthProvider = ({ children }) => {
         
         try {
             
+            console.log('Valor de la cookie "token":', getCookie('token'));
+            
             const res = await loginRequest(user);
             
             setUser(res.data);
