@@ -1,4 +1,4 @@
-export const FRONTEND_URL = process.env.FRONTEND_URL || "http://localhost:5173";
+export const FRONTEND_URL = process.env.FRONTEND_URL || "https://vnote-f.onrender.com";
 export const MONGODB_URI = process.env.MONGODB_URI || "mongodb+srv://immune_ae_one:PHJV04RNxiHZG51D@vnote.7xyx1pi.mongodb.net/VNote";
 export const PORT = process.env.PORT || 5000;
 
