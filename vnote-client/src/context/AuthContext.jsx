@@ -22,8 +22,6 @@ export const AuthProvider = ({ children }) => {
 
     const signup = async user => {
         
-        console.log('mensaje de prueba');
-        console.log('Valor de la cookie "token":', getCookie('token'));
         try {
             
             const res = await signupRequest(user);
@@ -35,9 +33,6 @@ export const AuthProvider = ({ children }) => {
     }
 
     const signin = async user => {
-
-        console.log('mensaje de prueba');
-        console.log('Valor de la cookie "token":', getCookie('token'));
         
         try {
             
