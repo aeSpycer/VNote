@@ -20,7 +20,7 @@ app.use((req, res, next) => {
 });
 
 app.use(cors({
-  origin: 'https://vnote-f.onrender.com', // Reemplaza con el dominio de tu frontend
+  origin: 'https://vnote-2cy7.onrender.com', // Reemplaza con el dominio de tu frontend
   credentials: true // Habilita el intercambio de cookies entre dominios
 }));
 
