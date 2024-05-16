@@ -27,15 +27,6 @@ function Navbar() {
 
     }, [rutaActual]); // Se ejecutará cada vez que rutaActual cambie
 
-    /*
-    
-        <li>Welcome {user.username}</li>
-
-        <li><Link to='/add-task'
-        className='bg-indigo-500 px-4 py-1 rounded-sm'>Add Task</Link></li>
-                        
-    */ 
-
     return (
 
         <nav>
