@@ -37,8 +37,6 @@ export const AuthProvider = ({ children }) => {
         try {
             
             const res = await loginRequest(user);
-
-            document.cookie = `token=${res.data.cookie}`;
             
             setUser(res.data);
             setIsAuthenticated(true);
