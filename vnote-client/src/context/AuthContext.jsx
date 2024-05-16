@@ -40,8 +40,6 @@ export const AuthProvider = ({ children }) => {
             setUser(res.data);
             setIsAuthenticated(true);
 
-            console.log(2, Cookies.get());
-
         } catch (error) { 
 
             if(Array.isArray(error.response.data)) return setErrors(error.response.data); 
@@ -111,8 +109,6 @@ export const AuthProvider = ({ children }) => {
         async function checkLogin() {
             
             const cookies = Cookies.get();
-
-            console.log(1, cookies);
             
             if (!cookies.token) {
                 setIsAuthenticated(false);
