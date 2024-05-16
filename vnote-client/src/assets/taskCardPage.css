@@ -1,0 +1,52 @@
+.vnote-one-task-wall {
+
+    width: 100%;
+    padding: 5rem 1rem;
+
+    display: flex;
+    justify-content: center;
+}
+
+.vnote-one-task-card {
+
+    width: 40rem;
+    max-width: 95%;
+
+    background: var(--color-2);
+
+}
+
+.vnote-one-task-card input, .vnote-one-task-card textarea {
+
+    width: 100%;
+    padding: 1rem;
+    outline: none;
+}
+
+.vnote-one-task-card input {
+
+    word-wrap: break-word;
+    font-size: var(--font-size-3);
+    background: var(--color-3);
+}
+
+.vnote-one-task-card textarea {
+
+    min-height: 30rem;
+    background: var(--color-2);
+}
+
+.vnote-one-task-card button {
+
+    padding: .3rem 1rem;
+    margin: 1rem;
+    margin-left: auto;
+
+    border-radius: .3rem;
+    background: var(--color-e-1);
+}
+
+.vnote-one-task-card button:hover {
+
+    background: var(--color-e-2);
+}

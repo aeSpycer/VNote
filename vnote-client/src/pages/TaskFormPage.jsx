@@ -3,6 +3,8 @@ import { useTasks } from '../context/TasksContext';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 
+import '../assets/taskCardPage.css';
+
 function TaskFormPage() {
 
     const {register, handleSubmit, setValue} = useForm();
@@ -36,7 +38,7 @@ function TaskFormPage() {
 
         } else {
 
-            createTask(data)
+            createTask(data);
 
         }
 
@@ -46,20 +48,21 @@ function TaskFormPage() {
 
 
     return (
-        <div className='bg-zinc-800 max-w-md w-full p-10 rounded-md'>
 
-            <form onSubmit={onSubmit}>
+        <div className='vnote-one-task-wall'>
+            <div className='vnote-one-task-card'>
 
-                <input type="text" placeholder="Title" name="title" { ...register("title") } autoFocus 
-                className='w-full bg-zinc-700 text-white px-4 py-2 rounded-md my-2'/>
+                <form onSubmit={onSubmit}>
 
-                <textarea rows="3" placeholder="Description" { ...register("description") } 
-                className='w-full bg-zinc-700 text-white px-4 py-2 rounded-md my-2'></textarea>
+                    <input type="text" placeholder="Titulo" name="title" { ...register("title") } />
 
-                <button>Save</button>
+                    <textarea rows="3" placeholder="Contenido" { ...register("description") } ></textarea>
 
-            </form>
+                    <button>Guardar</button>
 
+                </form>
+
+            </div>
         </div>
     );
 }

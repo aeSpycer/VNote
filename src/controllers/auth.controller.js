@@ -69,7 +69,7 @@ export const logout = (req, res) => {
     return res.sendStatus(200);
 }
 
-export const profile = async (req, res) => {
+export const getProfile = async (req, res) => {
 
     const userFound = await User.findById(req.user.id);
 
@@ -83,7 +83,23 @@ export const profile = async (req, res) => {
 
     })
 
-    res.send('Profile');
+}
+
+export const setProfile = async (req, res) => {
+
+    try {
+
+        const user = await User.findByIdAndUpdate(req.params.id, req.body, { new : true });
+
+        if (!user) return res.status(404).json({ message : "El nombre o el correo ya estan en uso." });
+
+        res.json(user);
+
+    } catch (error) {
+
+        return res.status(404).json({ message : "El nombre o el correo ya estan en uso." });
+
+    }
 
 }
 
