@@ -49,11 +49,11 @@ function LoginPage() {
 
                     <form onSubmit={ onSubmit }>
 
-                        <input type="email" { ...register('email', { required: true }) } placeholder='Email'/>
+                        <input type="email" { ...register('email', { required: true }) } placeholder='Correo'/>
 
                         { errors.email && (<p className='text-red-500'>Email is required</p>) }
 
-                        <input type="password" { ...register('password', { required: true }) } placeholder='Password'/>
+                        <input type="password" { ...register('password', { required: true }) } placeholder='Contraseña'/>
 
                         { errors.password && (<p className='text-red-500'>Password is required</p>) }
 

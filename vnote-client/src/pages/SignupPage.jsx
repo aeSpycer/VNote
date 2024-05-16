@@ -49,15 +49,15 @@ function SignupPage() {
                     <p> Ya tienes una cuenta? <Link to="/login" className="text-sky-500">Iniciar sesion</Link> </p>
                     <form onSubmit={ onSubmit }>
 
-                        <input type="text" { ...register('username', { required: true }) } placeholder='Username'/>
+                        <input type="text" { ...register('username', { required: true }) } placeholder='Nombre de usuario'/>
 
                         { errors.username && (<p className='text-red-500'>Username is required</p>) }
 
-                        <input type="email" { ...register('email', { required: true }) } placeholder='Email'/>
+                        <input type="email" { ...register('email', { required: true }) } placeholder='Correo'/>
 
                         { errors.email && (<p className='text-red-500'>Email is required</p>) }
 
-                        <input type="password" { ...register('password', { required: true }) } placeholder='Password'/>
+                        <input type="password" { ...register('password', { required: true }) } placeholder='Contraseña'/>
 
                         { errors.password && (<p className='text-red-500'>Password is required</p>) }
 
