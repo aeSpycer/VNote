@@ -12,6 +12,19 @@ export const getTasks = async (req, res) => {
     }
 }
 
+export const getAllTasks = async (req, res) => {
+
+    try {
+        const tasks = await Task.find();
+        res.json(tasks);
+
+    } catch (error) {
+        
+        return res.status(404).json({ message : "Algo fue mal" });
+
+    }
+}
+
 export const getTask = async (req, res) => {
 
     try {

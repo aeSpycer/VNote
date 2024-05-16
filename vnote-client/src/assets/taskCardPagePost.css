@@ -14,10 +14,13 @@
 
     background: var(--color-2);
 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
-.vnote-one-task-card input, 
-.vnote-one-task-card textarea {
+.vnote-one-task-card h1, 
+.vnote-one-task-card pre {
 
     width: 100%;
     padding: 1rem;
@@ -25,18 +28,23 @@
     word-wrap: break-word;
 }
 
-.vnote-one-task-card input {
+.vnote-one-task-card h1 {
 
-    word-wrap: break-word;
     font-size: var(--font-size-3);
     background: var(--color-3);
 }
 
-.vnote-one-task-card textarea {
+.vnote-one-task-card pre {
 
     min-height: 30rem;
-    overflow-y: auto;
+    max-height: 50rem;
     background: var(--color-2);
+
+    overflow: auto;
+
+    white-space: pre-wrap; /* Permite el ajuste de línea */
+    word-wrap: break-word; /* Rompe palabras largas */
+    word-break: break-word; /* Compatibilidad adicional para navegadores más antiguos */
 }
 
 .vnote-one-task-card button {

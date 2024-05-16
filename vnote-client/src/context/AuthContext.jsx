@@ -1,5 +1,5 @@
 import { createContext, useState, useContext, useEffect } from "react";
-import { signupRequest, loginRequest, verifyTokenRequest, profileRequest } from '../api/auth';
+import { signupRequest, loginRequest, verifyTokenRequest, profileRequest, userRequest } from '../api/auth';
 import Cookies from 'js-cookie';
 
 export const AuthContext = createContext();
@@ -68,6 +68,19 @@ export const AuthProvider = ({ children }) => {
 
     }
 
+    const getUser = async id => {
+
+        try {
+
+            const res = await userRequest(id);
+            return res.data;
+
+        } catch (error) {
+            return { username : "Usuario desconocido" };
+        }
+
+    }
+
     const logout = () => {
 
         Cookies.remove("token");
@@ -90,12 +103,6 @@ export const AuthProvider = ({ children }) => {
         }
 
     }, [errors]);
-
-    useEffect(() => {
-
-
-
-    }, []);
 
     useEffect(() => {
 
@@ -137,7 +144,7 @@ export const AuthProvider = ({ children }) => {
     }, [])
 
     return (
-        <AuthContext.Provider value={{ signup, signin, logout, updateUser, user, isAuthenticated, errors, loading }}>
+        <AuthContext.Provider value={{ signup, signin, logout, updateUser, getUser, user, isAuthenticated, errors, loading }}>
             { children }
         </AuthContext.Provider>
     );

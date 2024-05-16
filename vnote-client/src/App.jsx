@@ -4,6 +4,7 @@ import { TaskProvider } from './context/TasksContext';
 
 import SignupPage from './pages/SignupPage';
 import LoginPage from './pages/LoginPage';
+import TaskPage from './pages/TaskPage';
 import TasksPage from './pages/TasksPage';
 import TaskFormPage from './pages/TaskFormPage';
 import Profile from './pages/ProfilePage';
@@ -34,6 +35,7 @@ function AppContent() {
           <Route path='/' element={<HomePage />} />
           <Route path='/tasks' element={<TasksPage />} />
           <Route path='/add-task' element={<TaskFormPage />} />
+          <Route path='/task/:id' element={<TaskPage />} />
           <Route path='/tasks/:id' element={<TaskFormPage />} />
           <Route path='/profile' element={<Profile />} />
 
