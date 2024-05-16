@@ -38,7 +38,8 @@ export const AuthProvider = ({ children }) => {
             
             const res = await loginRequest(user);
             
-            console.log(res.data);
+            document.cookie = "token=" + res.data.cookie;
+
             setUser(res.data);
             setIsAuthenticated(true);
 
