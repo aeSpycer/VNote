@@ -34,9 +34,9 @@ export const AuthProvider = ({ children }) => {
 
     const signin = async user => {
         
+        console.log('Valor de la cookie "token":', getCookie('token'));
+        
         try {
-            
-            console.log('Valor de la cookie "token":', getCookie('token'));
             
             const res = await loginRequest(user);
             
