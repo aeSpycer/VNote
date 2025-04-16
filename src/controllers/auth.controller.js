@@ -51,12 +51,14 @@ export const login = async (req, res) => {
         if (!isMatch) return res.status(400).json({ message : "Incorrect password"});
 
         const token = await createAccessToken({ id : userFound._id });
-
+        
         res.cookie('token', token);
+        
         res.json({
             id : userFound._id,
             username : userFound.username,
-            email : userFound.email
+            email : userFound.email,
+            cookie : token
         });
 
     } catch (error) { res.status(500).json({ message : error.message }); }
