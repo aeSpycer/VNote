@@ -32,14 +32,12 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: |
-          cd vnote-client
-          npm ci
+        run: npm ci
+        working-directory: ./vnote-client
 
       - name: Build
-        run: |
-          cd vnote-client
-          npm run build
+        run: npm run build
+        working-directory: ./vnote-client
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -52,3 +50,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
