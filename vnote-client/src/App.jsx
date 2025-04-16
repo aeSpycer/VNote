@@ -26,18 +26,18 @@ function AppContent() {
       
       <Routes>
 
-        <Route path='/login' element={<LoginPage />} />
-        <Route path='/signup' element={<SignupPage />} />
+        <Route path='/VNote/login' element={<LoginPage />} />
+        <Route path='/VNote/signup' element={<SignupPage />} />
 
         {/*Rutas protegidas, solo se pueden acceder si inicio sesion*/}
         <Route element={<ProtectedRoute />}>
 
-          <Route path='/' element={<HomePage />} />
-          <Route path='/tasks' element={<TasksPage />} />
-          <Route path='/add-task' element={<TaskFormPage />} />
-          <Route path='/task/:id' element={<TaskPage />} />
-          <Route path='/tasks/:id' element={<TaskFormPage />} />
-          <Route path='/profile' element={<Profile />} />
+          <Route path='/VNote/' element={<HomePage />} />
+          <Route path='/VNote/tasks' element={<TasksPage />} />
+          <Route path='/VNote/add-task' element={<TaskFormPage />} />
+          <Route path='/VNote/task/:id' element={<TaskPage />} />
+          <Route path='/VNote/tasks/:id' element={<TaskFormPage />} />
+          <Route path='/VNote/profile' element={<Profile />} />
 
         </Route>
 
