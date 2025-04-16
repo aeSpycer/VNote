@@ -116,14 +116,7 @@
         flex-direction: column;
     }
 
-    .vnote-sign-banner {
-
-        width: 100%;
-        height: 30rem;
-
-        display: none;
-
-    }
+    .vnote-sign-banner { display: none; }
 
     .vnote-sign-form {
         
