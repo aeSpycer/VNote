@@ -121,6 +121,8 @@
         width: 100%;
         height: 30rem;
 
+        display: none;
+
     }
 
     .vnote-sign-form {
