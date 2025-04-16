@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { TaskProvider } from './context/TasksContext';
 
@@ -54,11 +54,11 @@ function App () {
 
     <AuthProvider>
       <TaskProvider>
-        <BrowserRouter>
+        <HashRouter>
 
           <AppContent />
 
-        </BrowserRouter>
+        </HashRouter>
       </TaskProvider>
     </AuthProvider>
 
