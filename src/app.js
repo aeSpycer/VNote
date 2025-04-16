@@ -8,7 +8,7 @@ import taskRoutes from './routes/task.routes.js';
 
 const app = express();
 
-app.use(cors({ origin: process.env.FRONTEND_URL || "https://vnote-f.onrender.com", credentials: true}));
+app.use(cors({ origin: process.env.FRONTEND_URL || "https://aeSpycer.github.io/VNote", credentials: true}));
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(cookieParser());
