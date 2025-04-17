@@ -13,6 +13,7 @@ export const authRequired = (req, res, next) => {
 
         req.user = user;
 
+        next();
     });
 
     next();

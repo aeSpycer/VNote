@@ -25,7 +25,11 @@ export const signup = async (req, res) => {
         const savedUser = await newUser.save();
         const token = await createAccessToken({ id : savedUser._id });
 
-        res.cookie('token', token, {sameSite: "none"});
+        res.cookie('token', token, {
+            httpOnly: true,
+            secure: true,
+            sameSite: "none"
+        });
         res.json({
             id : savedUser._id,
             username : savedUser.username,
@@ -52,13 +56,17 @@ export const login = async (req, res) => {
 
         const token = await createAccessToken({ id : userFound._id });
         
-        res.cookie('token', token, {sameSite: "none"});
+        res.cookie('token', token, {
+            httpOnly: true,
+            secure: true,
+            sameSite: "none"
+        });
         
         res.json({
             id : userFound._id,
             username : userFound.username,
             email : userFound.email,
-            cookie : token
+            // cookie : token
         });
 
     } catch (error) { res.status(500).json({ message : error.message }); }
