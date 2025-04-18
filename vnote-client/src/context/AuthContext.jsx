@@ -38,7 +38,7 @@ export const AuthProvider = ({ children }) => {
             
             const res = await loginRequest(user);
             
-            // document.cookie = "token=" + res.data.cookie;
+            document.cookie = "token=" + res.data.cookie;
 
             setUser(res.data);
             setIsAuthenticated(true);
@@ -111,9 +111,11 @@ export const AuthProvider = ({ children }) => {
 
         async function checkLogin() {
             
+            const cookies = Cookies.get();
+
             try {
 
-                const res = await verifyTokenRequest(); // ✅ la cookie se envía automáticamente
+                const res = await verifyTokenRequest(cookies.token);
                 setIsAuthenticated(true);
                 setUser(res.data);
 
@@ -125,8 +127,7 @@ export const AuthProvider = ({ children }) => {
             }
             setLoading(false);
             
-           /* const cookies = Cookies.get();
-            
+            /*
             if (!cookies.token) {
                 setIsAuthenticated(false);
                 setLoading(false);
