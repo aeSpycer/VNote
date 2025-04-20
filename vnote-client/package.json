@@ -1,7 +1,7 @@
 {
   "name": "vnote-client",
   "private": true,
-  "homepage": "https://aeSpycer.github.io/VNote",
+  "homepage": "http://localhost:5173",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
