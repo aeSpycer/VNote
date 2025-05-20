@@ -38,7 +38,7 @@ function LoginPage() {
                         ))
                     }
 
-                    <p className="splash-text">Investiga y comparte <br></br> creando notas!!</p>
+                    <p className="splash-text">Comparte tu conocimiento creando notas!!</p>
 
                 </div>
 

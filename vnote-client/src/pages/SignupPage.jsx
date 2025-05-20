@@ -39,6 +39,8 @@ function SignupPage() {
                         </div>
                         ))
                     }
+                    
+                    <p className="splash-text">Comparte tu conocimiento creando notas!!</p>
 
                 </div>
                 
