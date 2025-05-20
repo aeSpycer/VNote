@@ -45,11 +45,12 @@
 .splash-text {
 
     font-weight: 500;
-    position: sticky;
-    margin-top: 25%;
+    position: fixed;
+    margin-top: 50%;
     margin-left: 25%;
 
     font-size: var(--font-size-2);
+    color: var(--font-color-3);
     transform: rotateZ(45deg);
 
 }
