@@ -38,6 +38,8 @@ function LoginPage() {
                         ))
                     }
 
+                    <p className="splash-text">Investiga y comparte <br></br> creando notas!!</p>
+
                 </div>
 
 
