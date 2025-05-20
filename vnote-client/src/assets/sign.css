@@ -45,7 +45,7 @@
 .splash-text {
 
     font-weight: 500;
-    position: fixed;
+    position:static;
     margin-top: 50%;
     margin-left: 25%;
 
